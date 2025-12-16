@@ -1,8 +1,23 @@
-* {margin:0; padding:0; box-sizing:border-box;}
-body {font-family:'Segoe UI', Arial, sans-serif; color:#fff; background:#111;}
-a {text-decoration:none;}
+/* ==========================================
+   RESET & GLOBAL
+========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #fff;
+    background: #111;
+}
+a {
+    text-decoration: none;
+}
 
-/* HEADER FIXE ET STYLÉ */
+/* ==========================================
+   HEADER FIXE ET STYLÉ
+========================================== */
 .header {
     position: fixed;
     top: 0;
@@ -47,10 +62,12 @@ nav a::after {
     bottom: -5px;
     left: 0;
 }
-nav a:hover {color: #ffd700;}
-nav a:hover::after {width: 100%;}
+nav a:hover { color: #ffd700; }
+nav a:hover::after { width: 100%; }
 
-/* HERO */
+/* ==========================================
+   HERO SECTION
+========================================== */
 .hero {
     height: 100vh;
     background-image: url('../images/hero-football.jpg');
@@ -67,12 +84,31 @@ nav a:hover::after {width: 100%;}
     border-radius:20px;
     text-align:center;
 }
-.hero h1 {font-size:3.5rem; margin-bottom:20px; font-weight:bold;}
-.hero p {font-size:1.3rem; margin-bottom:30px;}
-.btn {background:#ffd700; color:#111; padding:12px 25px; border-radius:50px; font-weight:bold; transition:0.3s;}
-.btn:hover {background:#ffb400; transform: scale(1.05);}
+.hero h1 {
+    font-size:3.5rem;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+.hero p {
+    font-size:1.3rem;
+    margin-bottom:30px;
+}
+.btn {
+    background:#ffd700;
+    color:#111;
+    padding:12px 25px;
+    border-radius:50px;
+    font-weight:bold;
+    transition:0.3s;
+}
+.btn:hover {
+    background:#ffb400;
+    transform: scale(1.05);
+}
 
-/* CLUB SECTION */
+/* ==========================================
+   CLUB SECTIONS (INDEX.HTML)
+========================================== */
 .club-section {
     height:80vh;
     background-size:cover;
@@ -89,9 +125,19 @@ nav a:hover::after {width: 100%;}
     margin:50px;
     max-width:700px;
 }
-.club-logo {width:120px; margin-bottom:20px;}
-h2 {font-size:2.5rem; margin-bottom:10px;}
-.club-desc {font-size:1.1rem; line-height:1.6; margin-top:15px;}
+.club-logo {
+    width:120px;
+    margin-bottom:20px;
+}
+h2 {
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+.club-desc {
+    font-size:1.1rem;
+    line-height:1.6;
+    margin-top:15px;
+}
 .badge {
     display:inline-block;
     padding:6px 15px;
@@ -101,16 +147,80 @@ h2 {font-size:2.5rem; margin-bottom:10px;}
     font-size:0.9rem;
 }
 /* couleurs par championnat */
-.premier {background:#37003c;}
-.liga {background:#c60c30;}
-.seriea {background:#008fd7;}
-.bundes {background:#d20515;}
-.ligue1 {background:#091c3e;}
+.premier { background:#37003c; }
+.liga { background:#c60c30; }
+.seriea { background:#008fd7; }
+.bundes { background:#d20515; }
+.ligue1 { background:#091c3e; }
 
-/* FOOTER */
+/* ==========================================
+   TEAMS PAGE (TEAMS.HTML)
+========================================== */
+.teams-hero {
+    height: 50vh;
+    background-image: url('images/teams-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position: relative;
+    margin-top: 80px; /* espace pour header fixe */
+}
+.teams-hero .hero-overlay {
+    background: rgba(0,0,0,0.5);
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+}
+.teams-hero h1 { font-size:3rem; margin-bottom:15px; }
+.teams-hero p { font-size:1.2rem; }
+
+/* GRILLE DES CLUBS */
+.teams-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    padding:60px;
+}
+.club-card {
+    background: white;
+    color: #111;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.club-card:hover {
+    transform: translateY(-10px);
+}
+.club-card img {
+    width:100%;
+    height:180px;
+    object-fit: contain;
+    background: #f4f4f4;
+}
+.club-info { padding:20px; }
+.club-info h2 { margin:15px 0; }
+.desc { margin-top:10px; color:#555; }
+
+/* ==========================================
+   FOOTER
+========================================== */
 footer {
     background:#111;
     padding:20px;
     text-align:center;
 }
-footer a {color:#ffd700; margin:0 10px;}
+footer a {
+    color:#ffd700;
+    margin:0 10px;
+}
+
+/* ==========================================
+   ANIMATIONS LÉGÈRES
+========================================== */
+@keyframes fadeInUp {
+    0% { opacity:0; transform:translateY(50px);}
+    100% { opacity:1; transform:translateY(0);}
+}
