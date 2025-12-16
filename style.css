@@ -16,6 +16,13 @@ a {
 }
 
 /* ==========================================
+   SCROLL FLUIDE
+========================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==========================================
    HEADER FIXE ET STYLÉ
 ========================================== */
 .header {
@@ -39,7 +46,6 @@ a {
     align-items: center;
 }
 .site-name {
-    margin-left: 10px;
     font-size: 1.5rem;
     letter-spacing: 1px;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
