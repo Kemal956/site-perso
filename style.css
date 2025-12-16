@@ -1,53 +1,116 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f2f2f2;
-}
+* {margin:0; padding:0; box-sizing:border-box;}
+body {font-family:'Segoe UI', Arial, sans-serif; color:#fff; background:#111;}
+a {text-decoration:none;}
 
-header {
-    background-color: #0b3c5d;
-    color: white;
-    padding: 20px;
-    text-align: center;
+/* HEADER FIXE ET STYLÉ */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
-
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffd700;
+    display: flex;
+    align-items: center;
+}
+.site-name {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
 nav a {
     color: white;
-    margin: 0 10px;
-    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s;
 }
-
-.center {
-    text-align: center;
-    padding: 40px;
+nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #ffd700;
+    width: 0;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
 }
+nav a:hover {color: #ffd700;}
+nav a:hover::after {width: 100%;}
 
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    background: #0b3c5d;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
+/* HERO */
+.hero {
+    height: 100vh;
+    background-image: url('../images/hero-football.jpg');
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position: relative;
 }
-
-.teams {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+.hero-overlay {
+    background: rgba(0,0,0,0.5);
+    padding:50px;
+    border-radius:20px;
+    text-align:center;
 }
+.hero h1 {font-size:3.5rem; margin-bottom:20px; font-weight:bold;}
+.hero p {font-size:1.3rem; margin-bottom:30px;}
+.btn {background:#ffd700; color:#111; padding:12px 25px; border-radius:50px; font-weight:bold; transition:0.3s;}
+.btn:hover {background:#ffb400; transform: scale(1.05);}
 
-.team-card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
+/* CLUB SECTION */
+.club-section {
+    height:80vh;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    position:relative;
+    margin-top:20px;
 }
+.overlay {
+    background: rgba(0,0,0,0.6);
+    padding:50px;
+    border-radius:20px;
+    margin:50px;
+    max-width:700px;
+}
+.club-logo {width:120px; margin-bottom:20px;}
+h2 {font-size:2.5rem; margin-bottom:10px;}
+.club-desc {font-size:1.1rem; line-height:1.6; margin-top:15px;}
+.badge {
+    display:inline-block;
+    padding:6px 15px;
+    border-radius:20px;
+    font-weight:bold;
+    margin-bottom:15px;
+    font-size:0.9rem;
+}
+/* couleurs par championnat */
+.premier {background:#37003c;}
+.liga {background:#c60c30;}
+.seriea {background:#008fd7;}
+.bundes {background:#d20515;}
+.ligue1 {background:#091c3e;}
 
+/* FOOTER */
 footer {
-    background: #0b3c5d;
-    color: white;
-    text-align: center;
-    padding: 10px;
+    background:#111;
+    padding:20px;
+    text-align:center;
 }
+footer a {color:#ffd700; margin:0 10px;}
