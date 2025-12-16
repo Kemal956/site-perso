@@ -2,65 +2,97 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Mes équipes préférées</title>
+    <title>Mes clubs préférés</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-    <h1>Les 5 équipes</h1>
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">
+        ⚽ <span class="site-name">Passion Foot</span>
+    </div>
     <nav>
         <a href="index.html">Accueil</a>
-        <a href="teams.html">Les équipes</a>
+        <a href="#club1">Club 1</a>
+        <a href="#club2">Club 2</a>
+        <a href="#club3">Club 3</a>
+        <a href="#club4">Club 4</a>
+        <a href="#club5">Club 5</a>
     </nav>
 </header>
 
-<main class="teams">
+<!-- INTRO -->
+<section class="teams-hero">
+    <div class="hero-overlay">
+        <h1>Mes équipes favorites</h1>
+        <p>Voici mes 5 clubs préférés issus des 5 grands championnats européens.</p>
+    </div>
+</section>
 
-    <div class="team-card">
-        <h2>Nom du club</h2>
-        <p><strong>Championnat :</strong> Premier League</p>
-        <p><strong>Ville :</strong> </p>
-        <p><strong>Stade :</strong> </p>
-        <p>Pourquoi j’aime ce club...</p>
+<!-- TEAMS GRID -->
+<main class="teams-container">
+
+    <div class="club-card premier">
+        <img src="images/club1-logo.png" alt="Logo Club 1">
+        <div class="club-info">
+            <span class="badge premier">Premier League</span>
+            <h2>Nom du Club 1</h2>
+            <p><strong>Ville :</strong> Londres</p>
+            <p><strong>Stade :</strong> Emirates Stadium</p>
+            <p class="desc">Fondé en XXXX, ce club est célèbre pour ses victoires et joueurs emblématiques.</p>
+        </div>
     </div>
 
-    <div class="team-card">
-        <h2>Nom du club</h2>
-        <p><strong>Championnat :</strong> Liga</p>
-        <p><strong>Ville :</strong> </p>
-        <p><strong>Stade :</strong> </p>
-        <p>Pourquoi j’aime ce club...</p>
+    <div class="club-card liga">
+        <img src="images/club2-logo.png" alt="Logo Club 2">
+        <div class="club-info">
+            <span class="badge liga">Liga</span>
+            <h2>Nom du Club 2</h2>
+            <p><strong>Ville :</strong> Madrid</p>
+            <p><strong>Stade :</strong> Santiago Bernabeu</p>
+            <p class="desc">Club légendaire espagnol, connu pour son style de jeu et ses stars historiques.</p>
+        </div>
     </div>
 
-    <div class="team-card">
-        <h2>Nom du club</h2>
-        <p><strong>Championnat :</strong> Serie A</p>
-        <p><strong>Ville :</strong> </p>
-        <p><strong>Stade :</strong> </p>
-        <p>Pourquoi j’aime ce club...</p>
+    <div class="club-card seriea">
+        <img src="images/club3-logo.png" alt="Logo Club 3">
+        <div class="club-info">
+            <span class="badge seriea">Serie A</span>
+            <h2>Nom du Club 3</h2>
+            <p><strong>Ville :</strong> Milan</p>
+            <p><strong>Stade :</strong> San Siro</p>
+            <p class="desc">Club mythique italien, célèbre pour ses victoires et tactiques uniques.</p>
+        </div>
     </div>
 
-    <div class="team-card">
-        <h2>Nom du club</h2>
-        <p><strong>Championnat :</strong> Bundesliga</p>
-        <p><strong>Ville :</strong> </p>
-        <p><strong>Stade :</strong> </p>
-        <p>Pourquoi j’aime ce club...</p>
+    <div class="club-card bundes">
+        <img src="images/club4-logo.png" alt="Logo Club 4">
+        <div class="club-info">
+            <span class="badge bundes">Bundesliga</span>
+            <h2>Nom du Club 4</h2>
+            <p><strong>Ville :</strong> Munich</p>
+            <p><strong>Stade :</strong> Allianz Arena</p>
+            <p class="desc">Club allemand performant, reconnu pour son style efficace et ses grands joueurs.</p>
+        </div>
     </div>
 
-    <div class="team-card">
-        <h2>Nom du club</h2>
-        <p><strong>Championnat :</strong> Ligue 1</p>
-        <p><strong>Ville :</strong> </p>
-        <p><strong>Stade :</strong> </p>
-        <p>Pourquoi j’aime ce club...</p>
+    <div class="club-card ligue1">
+        <img src="images/club5-logo.png" alt="Logo Club 5">
+        <div class="club-info">
+            <span class="badge ligue1">Ligue 1</span>
+            <h2>Nom du Club 5</h2>
+            <p><strong>Ville :</strong> Paris</p>
+            <p><strong>Stade :</strong> Parc des Princes</p>
+            <p class="desc">Club français emblématique, connu pour ses titres et ses talents émergents.</p>
+        </div>
     </div>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
-    <p>© 2025 - Passion Football</p>
+    <p>© 2025 – Passion Football | <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
 </footer>
 
 </body>
